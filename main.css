@@ -29,6 +29,11 @@ body {
     min-height: 100vh;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
 .shell {
     max-width: 980px;
     margin: 0 auto;
@@ -248,6 +253,8 @@ button:disabled {
     border-radius: 18px;
     padding: 18px;
     background: linear-gradient(180deg, #ffffff, #fbfdfb);
+    content-visibility: auto;
+    contain-intrinsic-size: 240px;
 }
 
 .question-meta {
@@ -600,12 +607,6 @@ button:disabled {
     margin-bottom: 12px;
 }
 
-.result-actions {
-    margin-top: 22px;
-    display: flex;
-    justify-content: flex-end;
-}
-
 .analysis-box p {
     margin: 0;
     color: #304034;
@@ -687,7 +688,7 @@ button:disabled {
 }
 
 .author-box summary::after {
-    content: '灞曞紑';
+    content: '展开';
     font-size: 12px;
     font-weight: 700;
     color: var(--accent-strong);
@@ -699,7 +700,7 @@ button:disabled {
 }
 
 .author-box[open] summary::after {
-    content: '鏀惰捣';
+    content: '收起';
 }
 
 .author-content {
@@ -763,5 +764,13 @@ button:disabled {
     .dim-grid,
     .score-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
     }
 }
