@@ -20,3 +20,25 @@
 - [main.css](main.css)
 - [main.js](main.js)
 - [assets/type-images](assets/type-images)
+
+## 本地开发
+本项目已接入 Vite，支持 npm run dev。
+
+1. 安装依赖
+
+```bash
+npm install
+```
+
+2. 启动开发服务器
+
+```bash
+npm run dev
+```
+
+3. 常用命令
+
+```bash
+npm run build
+npm run preview
+```
